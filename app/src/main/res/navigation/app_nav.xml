@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_nav"
+    app:startDestination="@id/splashScreen">
+
+    <fragment
+        android:id="@+id/notesScreen"
+        android:name="com.mirzabek.noteappplaymarket.presintation.screens.NotesScreen"
+        android:label="NotesScreen"
+        tools:layout="@layout/note_screen"
+        >
+        <action
+            android:id="@+id/action_notesScreen_to_notesAddScreen"
+            app:destination="@id/notesAddScreen" />
+        <action
+            android:id="@+id/action_notesScreen_to_editNoteScreen"
+            app:destination="@id/editNoteScreen" />
+        <argument
+            android:name="id"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <action
+            android:id="@+id/action_notesScreen_to_infoScreen"
+            app:destination="@id/infoScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/notesAddScreen"
+        android:name="com.mirzabek.noteappplaymarket.presintation.screens.NotesAddScreen"
+        android:label="NotesAddScreen"
+        tools:layout="@layout/note_add_screen"
+        />
+    <fragment
+        android:id="@+id/editNoteScreen"
+        android:name="com.mirzabek.noteappplaymarket.presintation.screens.EditNoteScreen"
+        android:label="EditNoteScreen"
+        tools:layout="@layout/note_add_screen"
+
+        >
+        <argument
+            android:name="note_entity"
+            app:argType="com.mirzabek.noteappplaymarket.data.sourse.room.entity.NotesEntity"
+            />
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/infoScreen"
+        android:name="com.mirzabek.noteappplaymarket.presintation.screens.InfoScreen"
+        android:label="InfoScreen"
+        tools:layout="@layout/about_screen"
+        />
+    <fragment
+        android:id="@+id/splashScreen"
+        android:name="com.mirzabek.noteappplaymarket.presintation.screens.SplashScreen"
+        android:label="SplashScreen"
+        tools:layout="@layout/splashscreen"
+        >
+        <action
+            android:id="@+id/action_splashScreen_to_notesScreen"
+            app:destination="@id/notesScreen" />
+    </fragment>
+</navigation>

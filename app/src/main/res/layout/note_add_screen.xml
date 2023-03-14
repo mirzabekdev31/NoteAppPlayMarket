@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#7003A9F4"
+    android:layout_height="match_parent">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/AppBar"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:background="#03A9F4"
+        android:layout_height="60dp">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/BackBtn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_back"
+                android:tint="@color/white"
+                android:background="?android:selectableItemBackgroundBorderless"
+                android:layout_margin="20dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                tools:ignore="UseAppTint" />
+
+            <TextView
+                android:id="@+id/addNotee"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add Note"
+                />
+            <ImageView
+                android:id="@+id/AddNotess"
+                android:layout_marginRight="20dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_save"
+                android:tint="@color/white"
+                tools:ignore="UseAppTint" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/reed"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintTop_toBottomOf="@id/AppBar"
+        app:layout_constraintLeft_toLeftOf="@id/AppBar"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/background_reed"
+        >
+        <ImageView
+            android:id="@+id/checkReed"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/chack"
+            android:visibility="invisible"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/yellow"
+        android:layout_margin="10dp"
+        app:layout_constraintTop_toBottomOf="@id/AppBar"
+        app:layout_constraintLeft_toRightOf="@id/reed"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/background_yellow"
+        >
+        <ImageView
+            android:id="@+id/checkYellow"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/chack"
+            android:visibility="invisible"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/blue"
+        android:layout_margin="10dp"
+        app:layout_constraintTop_toBottomOf="@id/AppBar"
+        app:layout_constraintLeft_toRightOf="@id/yellow"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/background_blue"
+        >
+        <ImageView
+            android:id="@+id/checkBlue"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/chack"
+            android:visibility="invisible"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/green"
+        android:layout_margin="10dp"
+        app:layout_constraintTop_toBottomOf="@id/AppBar"
+        app:layout_constraintLeft_toRightOf="@id/blue"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/background_defoult"
+        >
+        <ImageView
+            android:id="@+id/checkGreen"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/chack"
+            android:visibility="invisible"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <org.wordpress.aztec.AztecText
+        android:id="@+id/editTitle"
+        android:layout_width="match_parent"
+        android:layout_marginTop="50dp"
+        android:layout_marginHorizontal="20dp"
+        app:layout_constraintTop_toBottomOf="@id/AppBar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_height="60dp"
+        android:layout_weight="1"
+        android:hint="Edit title ..."
+        style="@style/RegularTextStyle"
+        android:imeOptions="flagNoExtractUi"
+        android:inputType="textNoSuggestions|textMultiLine"
+        android:ems="14"
+        android:gravity="start|top"
+        android:padding="5dp"
+        android:maxLength="30"
+        android:maxLines="1"
+        app:textColor="@color/black"
+        app:textColorHint="@color/black"
+        android:scrollbars="vertical"
+
+        android:textColor="@color/white"
+        android:textColorHint="#FFFFFF" />
+    <TextView
+        android:id="@+id/data"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTitle"
+        android:layout_marginLeft="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="23.01.2023"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        />
+
+
+    <org.wordpress.aztec.AztecText
+        android:scrollbars="vertical"
+        android:id="@+id/Description"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="20dp"
+        android:ems="14"
+        android:gravity="start|top"
+        android:hint="Enter your text"
+        android:imeOptions="flagNoExtractUi"
+        android:inputType="textNoSuggestions|textMultiLine"
+        android:padding="5dp"
+        app:textColorHint="@color/black"
+        app:layout_constraintBottom_toTopOf="@id/toolBar"
+        app:layout_constraintTop_toBottomOf="@id/data"
+         />
+
+<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--        android:id="@+id/AddNotess"-->
+<!--        app:layout_constraintBottom_toTopOf="@id/toolBar"-->
+<!--        app:layout_constraintRight_toRightOf="parent"-->
+<!--        android:layout_margin="10dp"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        />-->
+
+
+    <org.wordpress.aztec.toolbar.AztecToolbar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:actionBarSize"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="MissingClass" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
